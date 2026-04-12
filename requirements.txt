@@ -1,0 +1,53 @@
+# XAI506 Deep Learning Midterm - Foundation Model Live Demo
+# Python 3.11.15 / conda env: deeplearning / CUDA 12.8
+#
+# Install:
+#   conda activate deeplearning
+#   pip install -r requirements.txt
+
+# ── PyTorch (CUDA 12.8) ───────────────────────────────────────────────────────
+# Install from PyTorch index (includes sm_120 Blackwell support):
+#   pip install torch==2.7.1+cu128 torchvision torchaudio \
+#       --index-url https://download.pytorch.org/whl/cu128
+torch==2.7.1+cu128
+triton==3.3.1
+
+# ── HuggingFace ───────────────────────────────────────────────────────────────
+transformers==4.55.4
+huggingface-hub==0.36.2
+accelerate==1.10.1
+safetensors==0.7.0
+tokenizers==0.21.4
+datasets==4.0.0
+peft==0.17.1
+
+# ── Attention (flash_attn은 PyTorch 버전과 맞게 재설치 필요할 수 있음) ────────
+# pip install flash-attn --no-build-isolation
+# flash-attn==2.8.3
+
+# ── Numerical / Vision ────────────────────────────────────────────────────────
+numpy==2.3.5
+scipy==1.17.1
+pillow==12.1.1
+opencv-python==4.13.0.92
+matplotlib==3.10.8
+scikit-learn==1.8.0
+einops==0.8.2
+
+# ── Demo / UI ─────────────────────────────────────────────────────────────────
+gradio==6.12.0
+supervision==0.27.0.post2
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+ipykernel==7.2.0
+ipywidgets==8.1.8
+ipympl==0.10.0
+jupyterlab_widgets==3.0.16
+widgetsnbextension==4.0.15
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+tqdm==4.67.1
+packaging==25.0
+requests==2.32.5
+PyYAML==6.0.3
+regex==2026.2.28
